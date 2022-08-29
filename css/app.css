@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, ol, menu {
+    list-style: none;
+}
+
+/* a {
+    color: currentColor;
+    text-decoration: none;
+} */
+
+img {
+    max-width: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #E0E0DC;
+}
+
+#root {
+    display: flex;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    height: 90%;
+    background-color: #FFFFFF;
+}
+
+.chat,
+.sidebar {
+    display: flex;
+    flex-direction: column;
+}
+
+.chat {
+    flex-grow: 1;
+}
+
+.sidebar {
+    flex-basis: 350px;
+}
+
+.screenchat {
+    flex-grow: 1;
+    background-image: url(../img/mine.jpg);
+    background-size: cover;
+}
+
+.contacts {
+    background-color: #FFFFFF;
+    flex-grow: 1;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F0F2F5;
+    padding: 8px 15px;
+}
+
+.pro-pics {
+    width: 35px;
+    border-radius: 50%;
+}
+
+.toolbar_profile {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.8rem;
+}
+
+.toolbar_items i {
+    margin-left: auto;
+    margin: 0 3px;
+    opacity: 30%;
+}
+
+.notifier {
+    font-size: 0.9rem;
+    display: flex;
+    gap: 10px;
+    align-items: center ;
+    background-color: aqua;
+    padding: 10px 15px;
+}
+
+.notifier i {
+    padding: 10px;
+    font-size: 1.3rem;
+    background-color: white;
+    color: aqua;
+    border-radius: 50%;
+}
+
+.search {
+    display: flex;
+    gap: 1px;
+    padding: 5px;
+    background-color: #F0F2F5;
+}
+
+.search input, .search button {
+    line-height: 15px;
+    background-color: #FFFFFF;
+    border: none;
+}
+
+.search button {
+    padding: 4px 10px;
+    font-size: 0.7rem;
+}
+.search button i {
+    opacity: 30%;
+    margin: 0 10px;
+}
+
+.search input {
+    padding: 3px 5px;
+    flex-grow: 1;
+}
