@@ -23,7 +23,7 @@ body {
     justify-content: center;
     height: 100vh;
     background: rgb(229,227,222);
-    background: linear-gradient(0deg, rgba(229,227,222,1) 85%, rgba(0,168,132,1) 85%)
+    background: linear-gradient(0deg, rgba(229,227,222,1) 75%, rgba(0,168,132,1) 75%)
 }
 
 #root {
@@ -74,6 +74,7 @@ body {
 }
 
 .last_access {
+    display: block;
     opacity: 35%;
     font-size: 0.6rem;
 }
@@ -96,19 +97,19 @@ body {
 }
 
 .notifier {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     display: flex;
     gap: 10px;
     align-items: center ;
-    background-color: aqua;
-    padding: 10px 15px;
+    background-color: skyblue;
+    padding: 5px 10px;
 }
 
 .notifier i {
     padding: 10px;
-    font-size: 1.3rem;
+    font-size: 1rem;
     background-color: white;
-    color: aqua;
+    color: skyblue;
     border-radius: 50%;
 }
 
@@ -120,7 +121,6 @@ body {
 }
 
 .search input, .search button {
-    line-height: 15px;
     background-color: #FFFFFF;
     border: none;
 }
@@ -135,6 +135,14 @@ body {
 }
 
 .search input {
+    font-size: 0.7rem;
     padding: 3px 5px;
     flex-grow: 1;
+}
+
+.contact {
+    border-top: 1px solid #F0F2F5;
+    padding: 7px 15px;
+    display: flex;
+    gap: 8px;
 }
