@@ -22,12 +22,13 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #E0E0DC;
+    background: rgb(229,227,222);
+    background: linear-gradient(0deg, rgba(229,227,222,1) 85%, rgba(0,168,132,1) 85%)
 }
 
 #root {
     display: flex;
-    max-width: 900px;
+    max-width: 1000px;
     width: 100%;
     margin: 0 auto;
     height: 90%;
@@ -72,6 +73,15 @@ body {
     border-radius: 50%;
 }
 
+.last_access {
+    opacity: 35%;
+    font-size: 0.6rem;
+}
+
+.toolbar:first-child {
+    border-left: 1px solid rgb(229,227,222);
+}
+
 .toolbar_profile {
     display: flex;
     align-items: center;
@@ -86,7 +96,7 @@ body {
 }
 
 .notifier {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     display: flex;
     gap: 10px;
     align-items: center ;
