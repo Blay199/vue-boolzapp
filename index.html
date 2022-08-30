@@ -40,7 +40,16 @@
                 <input type="text" placeholder="cerca">
             </div>
             <ul class="contacts">
-                <li class="contact">
+                <li v-for="item in contacts" class="contact">
+                    <img :src="item.avatar" alt="" class="pro-pics">
+                    <div class="Name">
+                        {{item.name}}
+                        <span class="last_access">
+                            Ultimo messaggio inviato
+                        </span>
+                    </div>
+                </li>
+                <!-- <li class="contact">
                     <img src="img/avatar_5.jpg" alt="" class="pro-pics">
                     <div class="Name">
                         Zoro
@@ -57,16 +66,7 @@
                             Ultimo messaggio inviato
                         </span>
                     </div>
-                </li>
-                <li class="contact">
-                    <img src="img/avatar_5.jpg" alt="" class="pro-pics">
-                    <div class="Name">
-                        Zoro
-                        <span class="last_access">
-                            Ultimo messaggio inviato
-                        </span>
-                    </div>
-                </li>
+                </li> -->
             </ul>
         </div>
         <div class="chat-wrapper">
