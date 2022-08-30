@@ -91,7 +91,6 @@ body {
 }
 
 .toolbar_items i {
-    margin-left: auto;
     margin: 0 3px;
     opacity: 30%;
 }
@@ -145,4 +144,28 @@ body {
     padding: 7px 15px;
     display: flex;
     gap: 8px;
+}
+
+.chatbox {
+    display: flex;
+    align-items: center;
+    background-color: #F0F2F5;
+    padding: 3px 2px;
+}
+
+.chatbox input {
+    border-radius: 3px;
+    border: none;
+    flex-grow: 1;
+    padding: 8px;
+}
+
+.chatbox input::placeholder {
+    opacity: 35%;
+    font-size: 0.7rem;
+}
+
+.chatbox_items {
+    margin: 0 15px;
+    opacity: 40%;
 }
