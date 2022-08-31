@@ -167,10 +167,21 @@ const app = new Vue({
     data: {
         contacts,
         activeItem: contacts[0],
+        text: '',
     },
     methods: {
         setActiveitem(item) {
             this.activeItem = item
+        },
+        sent() {
+            const text = this.text
+            const message = {
+                date: '',
+                message: text,
+                status: 'sent',
+            }
+
+            this.contacts[ this.activeItem ].messages.push(message)
         }
     }
 })
