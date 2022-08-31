@@ -1,6 +1,6 @@
 const contacts = [{
         name: 'Michele',
-        avatar: 'avatar_1.jpg',
+        avatar: './img/avatar_1.jpg',
         visible: true,
         active: null,
         messages: [{
@@ -22,7 +22,7 @@ const contacts = [{
     },
     {
         name: 'Fabio',
-        avatar: 'avatar_2.jpg',
+        avatar: './img/avatar_2.jpg',
         visible: false,
         active: null,
         messages: [{
@@ -44,7 +44,7 @@ const contacts = [{
     },
     {
         name: 'Samuele',
-        avatar: 'avatar_3.jpg',
+        avatar: './img/avatar_3.jpg',
         visible: false,
         active: null,
         messages: [{
@@ -66,7 +66,7 @@ const contacts = [{
     },
     {
         name: 'Alessandro B.',
-        avatar: 'avatar_4.jpg',
+        avatar: './img/avatar_4.jpg',
         visible: false,
         active: null,
         messages: [{
@@ -83,7 +83,7 @@ const contacts = [{
     },
     {
         name: 'Alessandro L.',
-        avatar: 'avatar_5.jpg',
+        avatar: './img/avatar_5.jpg',
         visible: false,
         active: null,
         messages: [{
@@ -100,7 +100,7 @@ const contacts = [{
     },
     {
         name: 'Claudia',
-        avatar: 'avatar_6.jpg',
+        avatar: './img/avatar_6.jpg',
         visible: false,
         active: null,
         messages: [{
@@ -122,7 +122,7 @@ const contacts = [{
     },
     {
         name: 'Federico',
-        avatar: 'avatar_7.jpg',
+        avatar: './img/avatar_7.jpg',
         visible: false,
         active: null,
         messages: [{
@@ -139,7 +139,7 @@ const contacts = [{
     },
     {
         name: 'Davide',
-        avatar: 'avatar_8.jpg',
+        avatar: './img/avatar_8.jpg',
         visible: false,
         active: 'active',
         messages: [{
@@ -166,6 +166,11 @@ const app = new Vue({
     el: '#root',
     data: {
         contacts,
-        chatIndex: 0,
+        activeItem: contacts[0],
+    },
+    methods: {
+        setActiveitem(item) {
+            this.activeItem = item
+        }
     }
 })

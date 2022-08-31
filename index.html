@@ -41,7 +41,7 @@
                 <input type="text" placeholder="cerca">
             </div>
             <ul class="contacts">
-                <li v-for="item in contacts" class="contact">
+                <li @click="setActiveitem(item)" v-for="(item, i) in contacts" class="contact">
                     <img :src="item.avatar" alt="" class="pro-pics">
                     <div class="Name">
                         {{item.name}}
@@ -55,9 +55,9 @@
         <div class="chat-wrapper">
             <div class="toolbar">
                 <div class="toolbar_profile">
-                    <img class="pro-pics" :src="`./img/avatar${ contacts[chatIndex].avatar }.jpg`">
+                    <img class="pro-pics" :src="`${ activeItem.avatar }`">
                     <span>
-                        <h3 class="name_avatar">{{ contacts[chatIndex].name }}</h3>
+                        <h3 class="name_avatar">{{ activeItem.name }}</h3>
                         <span class="last_access">
                             Ultimo accesso oggi alle 12.00
                         </span>
@@ -70,19 +70,13 @@
                 </div>
             </div>
             <div class="screenchat">
-                <div v-for="(item, i) in contacts[chatIndex].messages" class="chat receveid">
+                <div v-for="(item, i) in activeItem.messages" :class="`chat ${item.status}`">
                     {{ item.message }}
                     <div class="time">
                         16.00
                     </div>
                 </div>
-                <!-- <div class="chat sent">
-                        Tutto bene, tu?
-                        <div class="time">
-                            16.03
-                        </div>
-                    </div>
-                </div> -->
+            </div>
                 <div class="chatbox">
                     <div class="chatbox_items">
                         <i class="fa-regular fa-face-smile"></i>
@@ -92,7 +86,6 @@
                         <i class="fa-solid fa-microphone"></i>
                     </div>
                 </div>
-            </div>
 
         </div>
 
