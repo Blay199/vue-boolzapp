@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,13 +13,13 @@
     <link rel="stylesheet" href="css/app.css">
     <title>Boolzapp</title>
 </head>
+
 <body>
     <div id="root">
         <div class="sidebar">
             <div class="toolbar">
                 <div class="toolbar_profile">
-                    <img class="pro-pics" src="img/avatar_2.jpg" alt="Profile_picture">
-                    Alberto
+                    <img class="pro-pics" src="img/avatar_io.jpg" alt="Profile_picture"> Alberto
                 </div>
                 <div class="toolbar_items">
                     <i class="fa-solid fa-circle-notch"></i>
@@ -34,7 +35,7 @@
                 </div>
             </div>
             <div class="search">
-                    <button>
+                <button>
                     <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                 <input type="text" placeholder="cerca">
@@ -49,32 +50,14 @@
                         </span>
                     </div>
                 </li>
-                <!-- <li class="contact">
-                    <img src="img/avatar_5.jpg" alt="" class="pro-pics">
-                    <div class="Name">
-                        Zoro
-                        <span class="last_access">
-                            Ultimo messaggio inviato
-                        </span>
-                    </div>
-                </li>
-                <li class="contact">
-                    <img src="img/avatar_5.jpg" alt="" class="pro-pics">
-                    <div class="Name">
-                        Zoro
-                        <span class="last_access">
-                            Ultimo messaggio inviato
-                        </span>
-                    </div>
-                </li> -->
             </ul>
         </div>
         <div class="chat-wrapper">
             <div class="toolbar">
                 <div class="toolbar_profile">
-                    <img class="pro-pics" src="img/avatar_5.jpg" alt="">
+                    <img class="pro-pics" :src="`./img/avatar${ contacts[chatIndex].avatar }.jpg`">
                     <span>
-                        Zoro <br>
+                        <h3 class="name_avatar">{{ contacts[chatIndex].name }}</h3>
                         <span class="last_access">
                             Ultimo accesso oggi alle 12.00
                         </span>
@@ -87,33 +70,34 @@
                 </div>
             </div>
             <div class="screenchat">
-                <div class="chat receveid">
-                    Ciao, come va?
+                <div v-for="(item, i) in contacts[chatIndex].messages" class="chat receveid">
+                    {{ item.message }}
                     <div class="time">
                         16.00
                     </div>
                 </div>
-                <div class="chat sent">
-                    Tutto bene, tu?
-                    <div class="time">
-                        16.03
-                    </div> 
+                <!-- <div class="chat sent">
+                        Tutto bene, tu?
+                        <div class="time">
+                            16.03
+                        </div>
+                    </div>
+                </div> -->
+                <div class="chatbox">
+                    <div class="chatbox_items">
+                        <i class="fa-regular fa-face-smile"></i>
+                    </div>
+                    <input class="typing-zone" type="text" placeholder="Scrivi un messaggio">
+                    <div class="chatbox_items">
+                        <i class="fa-solid fa-microphone"></i>
+                    </div>
                 </div>
             </div>
-            <div class="chatbox">
-                <div class="chatbox_items">
-                    <i class="fa-regular fa-face-smile"></i>
-                </div>
-                <input class="typing-zone" type="text" placeholder="Scrivi un messaggio">
-                <div class="chatbox_items">
-                    <i class="fa-solid fa-microphone"></i>
-                </div>
-            </div>
-        </div>
-        
-    </div>
-    
 
-    <script src="js/app.js"></script>
+        </div>
+
+
+        <script src="js/app.js"></script>
 </body>
+
 </html>

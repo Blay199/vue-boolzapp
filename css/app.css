@@ -8,9 +8,12 @@ html {
     box-sizing: border-box;
 }
 
-ul, ol, menu {
+ul,
+ol,
+menu {
     list-style: none;
 }
+
 
 /* a {
     color: currentColor;
@@ -26,8 +29,8 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: rgb(229,227,222);
-    background: linear-gradient(0deg, rgba(229,227,222,1) 75%, rgba(0,168,132,1) 75%)
+    background: rgb(229, 227, 222);
+    background: linear-gradient(0deg, rgba(229, 227, 222, 1) 75%, rgba(0, 168, 132, 1) 75%)
 }
 
 #root {
@@ -78,7 +81,7 @@ body {
 }
 
 .toolbar:first-child {
-    border-left: 1px solid rgb(229,227,222);
+    border-left: 1px solid rgb(229, 227, 222);
 }
 
 .toolbar_profile {
@@ -97,7 +100,7 @@ body {
     font-size: 0.7rem;
     display: flex;
     gap: 10px;
-    align-items: center ;
+    align-items: center;
     background-color: skyblue;
     padding: 5px 10px;
 }
@@ -117,7 +120,8 @@ body {
     background-color: #F0F2F5;
 }
 
-.search input, .search button {
+.search input,
+.search button {
     background-color: #FFFFFF;
     border: none;
 }
@@ -126,6 +130,7 @@ body {
     padding: 4px 10px;
     font-size: 0.7rem;
 }
+
 .search button i {
     opacity: 30%;
     margin: 0 10px;
@@ -144,7 +149,8 @@ body {
     gap: 8px;
 }
 
-.contact.active, .contact:hover {
+.contact.active,
+.contact:hover {
     background-color: #dedede;
 }
 
@@ -183,6 +189,7 @@ body {
 }
 
 .chat {
+    margin-bottom: 5px;
     position: relative;
     min-width: 200px;
     border-radius: 8px;
@@ -199,7 +206,7 @@ body {
 
 .receveid {
     background-color: #FFFFFF;
-    align-self: flex-start;   
+    align-self: flex-start;
 }
 
 .sent {
